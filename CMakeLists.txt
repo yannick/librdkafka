@@ -45,7 +45,7 @@ option(WITH_PLUGINS "With plugin support" ${with_plugins_default})
 if(WITH_BUNDLED_SSL) # option from 'h2o' parent project
   set(with_ssl_default ON)
 else()
-  find_package(OpenSSL QUIET)
+  find_package(OpenSSL)
   if(OpenSSL_FOUND)
     set(with_ssl_default ON)
   else()
