@@ -8,7 +8,8 @@ endif()
 
 if(@WITH_SSL@)
   if(@WITH_BUNDLED_SSL@)
-    # TODO: custom SSL library should be installed
+    MESSAGE( "WITH_BUNDLED_SSL was picket up")
+    find_dependency(OpenSSL)
   else()
     find_dependency(OpenSSL)
   endif()
